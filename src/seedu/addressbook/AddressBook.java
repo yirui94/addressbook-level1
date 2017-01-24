@@ -361,7 +361,6 @@ public class AddressBook {
     /**
      * Executes the command as specified by the {@code userInputString}
      *
-     * @param userInputString  raw input from user
      * @return  feedback about how the command was executed
      */
     private static String executeCommand(String userInputString) {
@@ -434,7 +433,6 @@ public class AddressBook {
      * Constructs a feedback message for a successful add person command execution.
      *
      * @see #executeAddPerson(String)
-     * @param addedPerson person who was successfully added
      * @return successful add person feedback message
      */
     private static String getMessageForSuccessfulAddPerson(String[] addedPerson) {
@@ -459,7 +457,6 @@ public class AddressBook {
     /**
      * Constructs a feedback message to summarise an operation that displayed a listing of persons.
      *
-     * @param personsDisplayed used to generate summary
      * @return summary message for persons displayed
      */
     private static String getMessageForPersonsDisplayedSummary(ArrayList<String[]> personsDisplayed) {
@@ -477,9 +474,8 @@ public class AddressBook {
     }
 
     /**
-     * Retrieves all persons in the full model whose names contain some of the specified keywords.
+     * Retrieves all persons in the full model whose names contain some of the specified keywords [Case Sensitive].
      *
-     * @param keywords for searching
      * @return list of persons in full model with name containing some of the keywords
      */
     private static ArrayList<String[]> getPersonsWithNameContainingAnyKeyword(Collection<String> keywords) {
@@ -551,7 +547,6 @@ public class AddressBook {
      * Constructs a feedback message for a successful delete person command execution.
      *
      * @see #executeDeletePerson(String)
-     * @param deletedPerson successfully deleted
      * @return successful delete person feedback message
      */
     private static String getMessageForSuccessfulDelete(String[] deletedPerson) {
@@ -725,7 +720,6 @@ public class AddressBook {
      * Converts contents of a file into a list of persons.
      * Shows error messages and exits program if any errors in reading or decoding was encountered.
      *
-     * @param filePath file to load from
      * @return the list of decoded persons
      */
     private static ArrayList<String[]> loadPersonsFromFile(String filePath) {
@@ -794,11 +788,11 @@ public class AddressBook {
      * @return true if the given person was found and deleted in the model
      */
     private static boolean deletePersonFromAddressBook(String[] exactPerson) {
-        final boolean changed = ALL_PERSONS.remove(exactPerson);
-        if (changed) {
+        final boolean isChanged = ALL_PERSONS.remove(exactPerson);
+        if (isChanged) {
             savePersonsToFile(getAllPersonsInAddressBook(), storageFilePath);
         }
-        return changed;
+        return isChanged;
     }
 
     /**
@@ -836,7 +830,6 @@ public class AddressBook {
     /**
      * Returns the given person's name
      *
-     * @param person whose name you want
      */
     private static String getNameFromPerson(String[] person) {
         return person[PERSON_DATA_INDEX_NAME];
@@ -845,7 +838,6 @@ public class AddressBook {
     /**
      * Returns given person's phone number
      *
-     * @param person whose phone number you want
      */
     private static String getPhoneFromPerson(String[] person) {
         return person[PERSON_DATA_INDEX_PHONE];
@@ -854,7 +846,6 @@ public class AddressBook {
     /**
      * Returns given person's email
      *
-     * @param person whose email you want
      */
     private static String getEmailFromPerson(String[] person) {
         return person[PERSON_DATA_INDEX_EMAIL];
@@ -879,7 +870,6 @@ public class AddressBook {
     /**
      * Encodes a person into a decodable and readable string representation.
      *
-     * @param person to be encoded
      * @return encoded string
      */
     private static String encodePersonToString(String[] person) {
@@ -890,7 +880,6 @@ public class AddressBook {
     /**
      * Encodes list of persons into list of decodable and readable string representations.
      *
-     * @param persons to be encoded
      * @return encoded strings
      */
     private static ArrayList<String> encodePersonsToStrings(ArrayList<String[]> persons) {
@@ -1146,8 +1135,6 @@ public class AddressBook {
     /**
      * Removes sign(p/, d/, etc) from parameter string
      *
-     * @param fullString  Parameter as a string
-     * @param prefix  Parameter sign to be removed
      * @return  string without the sign
      */
     private static String removePrefix(String fullString, String prefix) {
