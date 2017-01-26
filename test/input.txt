@@ -36,10 +36,16 @@
   # order of phone and email should not matter
   add Charlie Dickson e/charlie.d@nus.edu.sg p/333333 d/31-12-2000
   list
-  add Dickson Ee e/dickson@nus.edu.sg p/444444 d/31-12-2000
-  list
   add Esther Potato p/555555 e/esther@notreal.potato d/31-12-2000
   list
+  add Dickson Ee e/dickson@nus.edu.sg p/444444 d/31-12-2000
+  list
+
+##########################################################
+# test sort persons command
+##########################################################
+
+  sort
 
 ##########################################################
 # test find persons command

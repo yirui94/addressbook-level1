@@ -62,6 +62,9 @@
 || list: Displays all persons as a list with index numbers.
 || 	Example: list
 || 
+|| sort: Display all persons as a list in alphabetical order
+|| 	Example: sort
+|| 
 || delete: Deletes a person identified by the index number used in the last find/list call.
 || 	Parameters: INDEX
 || 	Example: delete 1
@@ -148,6 +151,17 @@
 || 
 || 3 persons found!
 || ===================================================
+|| Enter command: || [Command entered:  add Esther Potato p/555555 e/esther@notreal.potato d/31-12-2000]
+|| New person added: Esther Potato, Phone: 555555, Email: esther@notreal.potato, Date of Birth: 31-12-2000
+|| ===================================================
+|| Enter command: || [Command entered:  list]
+|| 	1. Adam Brown  Phone Number: 111111  Email: adam@gmail.com  Date of Birth: 31-12-2000
+|| 	2. Betsy Choo  Phone Number: 222222  Email: benchoo@nus.edu.sg  Date of Birth: 31-12-2000
+|| 	3. Charlie Dickson  Phone Number: 333333  Email: charlie.d@nus.edu.sg  Date of Birth: 31-12-2000
+|| 	4. Esther Potato  Phone Number: 555555  Email: esther@notreal.potato  Date of Birth: 31-12-2000
+|| 
+|| 4 persons found!
+|| ===================================================
 || Enter command: || [Command entered:  add Dickson Ee e/dickson@nus.edu.sg p/444444 d/31-12-2000]
 || New person added: Dickson Ee, Phone: 444444, Email: dickson@nus.edu.sg, Date of Birth: 31-12-2000
 || ===================================================
@@ -155,14 +169,12 @@
 || 	1. Adam Brown  Phone Number: 111111  Email: adam@gmail.com  Date of Birth: 31-12-2000
 || 	2. Betsy Choo  Phone Number: 222222  Email: benchoo@nus.edu.sg  Date of Birth: 31-12-2000
 || 	3. Charlie Dickson  Phone Number: 333333  Email: charlie.d@nus.edu.sg  Date of Birth: 31-12-2000
-|| 	4. Dickson Ee  Phone Number: 444444  Email: dickson@nus.edu.sg  Date of Birth: 31-12-2000
+|| 	4. Esther Potato  Phone Number: 555555  Email: esther@notreal.potato  Date of Birth: 31-12-2000
+|| 	5. Dickson Ee  Phone Number: 444444  Email: dickson@nus.edu.sg  Date of Birth: 31-12-2000
 || 
-|| 4 persons found!
+|| 5 persons found!
 || ===================================================
-|| Enter command: || [Command entered:  add Esther Potato p/555555 e/esther@notreal.potato d/31-12-2000]
-|| New person added: Esther Potato, Phone: 555555, Email: esther@notreal.potato, Date of Birth: 31-12-2000
-|| ===================================================
-|| Enter command: || [Command entered:  list]
+|| Enter command: || [Command entered:  sort]
 || 	1. Adam Brown  Phone Number: 111111  Email: adam@gmail.com  Date of Birth: 31-12-2000
 || 	2. Betsy Choo  Phone Number: 222222  Email: benchoo@nus.edu.sg  Date of Birth: 31-12-2000
 || 	3. Charlie Dickson  Phone Number: 333333  Email: charlie.d@nus.edu.sg  Date of Birth: 31-12-2000
